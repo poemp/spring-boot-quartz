@@ -64,6 +64,10 @@ public class TaskManageServiceImpl implements TaskManageService {
             }
             //添加任务
             if(timeTask.getTimeTaskSwitch()){
+                /**
+                 * Create a JobBuilder with which to define a JobDetail,
+                 * and set the class name of the Job to be executed.
+                 */
                 JobDetail jobDetail = JobBuilder.newJob(ScheduledJobExecutor.class).withIdentity(new JobKey(timeTask.getId())).build();
                 jobDetail.getJobDataMap().put(JobDetailPrimaryKey.DETAIL_KEY,timeTask);
                 //设置表达式

@@ -6,6 +6,9 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
+/**
+ * @author poem
+ */
 @Entity
 @Table(name = "TIME_TASK")
 public class TimeTask extends IdEntity {

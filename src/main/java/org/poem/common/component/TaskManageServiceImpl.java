@@ -16,6 +16,7 @@ import java.util.List;
 
 /**
  * quartz 定时任务管理
+ * @author poem
  */
 @Service
 public class TaskManageServiceImpl implements TaskManageService {
@@ -59,7 +60,8 @@ public class TaskManageServiceImpl implements TaskManageService {
                 scheduler.pauseTrigger(triggerKey);
                 //移除触发器
                 scheduler.unscheduleJob(triggerKey);
-                scheduler.deleteJob(new JobKey(timeTask.getId()));//删除任务
+                //删除任务
+                scheduler.deleteJob(new JobKey(timeTask.getId()));
                 logger.info("删除定时任务->> " + timeTask + "");
             }
             //添加任务

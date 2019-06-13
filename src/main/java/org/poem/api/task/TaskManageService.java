@@ -5,6 +5,9 @@ import org.quartz.SchedulerException;
 
 import java.util.List;
 
+/**
+ * @author poem
+ */
 public interface TaskManageService  {
 
     /**

@@ -16,6 +16,7 @@ import java.lang.reflect.Method;
  * 定时任务的执行
  * 把任务添加进来就可以执行
  * 这个是spring quartz自动执行的
+ * @author poem
  */
 public class ScheduledJobExecutor implements Job {
 

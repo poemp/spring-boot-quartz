@@ -8,6 +8,7 @@ import java.io.Serializable;
 
 /**
  * 基类
+ * @author poem
  */
 @MappedSuperclass
 public class IdEntity  implements Serializable{
